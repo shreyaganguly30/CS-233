@@ -1,0 +1,137 @@
+#! /usr/bin/vvp
+:ivl_version "10.2 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x55be1a27d020 .scope module, "blackbox_test" "blackbox_test" 2 1;
+ .timescale 0 0;
+v0x55be1a2a9ee0_0 .var "a", 0 0;
+v0x55be1a2a9fa0_0 .var "b", 0 0;
+v0x55be1a2aa070_0 .var "c", 0 0;
+v0x55be1a2aa170_0 .net "z", 0 0, L_0x55be1a2aa240;  1 drivers
+S_0x55be1a27d1a0 .scope module, "ex1" "blackbox" 2 4, 3 1 0, S_0x55be1a27d020;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "z"
+    .port_info 1 /INPUT 1 "x"
+    .port_info 2 /INPUT 1 "b"
+    .port_info 3 /INPUT 1 "d"
+L_0x55be1a2aa240 .functor AND 1, L_0x55be1a2aa2e0, L_0x55be1a2aa4e0, C4<1>, C4<1>;
+L_0x55be1a2aa2e0 .functor OR 1, L_0x55be1a2aa7e0, L_0x55be1a2aa3d0, C4<0>, C4<0>;
+L_0x55be1a2aa3d0 .functor NOT 1, L_0x55be1a2aa7e0, C4<0>, C4<0>, C4<0>;
+L_0x55be1a2aa4e0 .functor OR 1, L_0x55be1a2ab110, L_0x55be1a2aa5d0, C4<0>, C4<0>;
+L_0x55be1a2aa5d0 .functor AND 1, L_0x55be1a2aa690, L_0x55be1a2aadd0, C4<1>, C4<1>;
+L_0x55be1a2aa690 .functor NOT 1, L_0x55be1a2aadd0, C4<0>, C4<0>, C4<0>;
+L_0x55be1a2aa7e0 .functor OR 1, L_0x55be1a2aa850, L_0x55be1a2aabe0, C4<0>, C4<0>;
+L_0x55be1a2aa850 .functor AND 1, L_0x55be1a2aa960, L_0x55be1a2aaa70, C4<1>, C4<1>;
+L_0x55be1a2aa960 .functor NOT 1, v0x55be1a2a9fa0_0, C4<0>, C4<0>, C4<0>;
+L_0x55be1a2aaa70 .functor NOT 1, v0x55be1a2aa070_0, C4<0>, C4<0>, C4<0>;
+L_0x55be1a2aabe0 .functor AND 1, v0x55be1a2a9fa0_0, L_0x55be1a2aac50, v0x55be1a2aa070_0, C4<1>;
+L_0x55be1a2aac50 .functor NOT 1, v0x55be1a2a9ee0_0, C4<0>, C4<0>, C4<0>;
+L_0x55be1a2aadd0 .functor AND 1, v0x55be1a2a9fa0_0, L_0x55be1a2aae40, C4<1>, C4<1>;
+L_0x55be1a2aae40 .functor OR 1, v0x55be1a2a9ee0_0, L_0x55be1a2aad60, C4<0>, C4<0>;
+L_0x55be1a2aad60 .functor AND 1, v0x55be1a2aa070_0, L_0x55be1a2aaf80, C4<1>, C4<1>;
+L_0x55be1a2aaf80 .functor NOT 1, v0x55be1a2a9ee0_0, C4<0>, C4<0>, C4<0>;
+L_0x55be1a2ab110 .functor AND 1, L_0x55be1a2ab180, L_0x55be1a2ab2e0, C4<1>, C4<1>;
+L_0x55be1a2ab180 .functor NOT 1, v0x55be1a2a9fa0_0, C4<0>, C4<0>, C4<0>;
+L_0x55be1a2ab2e0 .functor OR 1, v0x55be1a2a9ee0_0, L_0x55be1a2ab3a0, C4<0>, C4<0>;
+L_0x55be1a2ab3a0 .functor NOT 1, v0x55be1a2aa070_0, C4<0>, C4<0>, C4<0>;
+v0x55be1a243030_0 .net "b", 0 0, v0x55be1a2a9fa0_0;  1 drivers
+v0x55be1a2a8d80_0 .net "d", 0 0, v0x55be1a2aa070_0;  1 drivers
+v0x55be1a2a8e40_0 .net "w02", 0 0, L_0x55be1a2aa960;  1 drivers
+v0x55be1a2a8f10_0 .net "w13", 0 0, L_0x55be1a2aae40;  1 drivers
+v0x55be1a2a8fd0_0 .net "w16", 0 0, L_0x55be1a2aa850;  1 drivers
+v0x55be1a2a90e0_0 .net "w18", 0 0, L_0x55be1a2aa3d0;  1 drivers
+v0x55be1a2a91a0_0 .net "w31", 0 0, L_0x55be1a2ab3a0;  1 drivers
+v0x55be1a2a9260_0 .net "w33", 0 0, L_0x55be1a2aad60;  1 drivers
+v0x55be1a2a9320_0 .net "w34", 0 0, L_0x55be1a2aa2e0;  1 drivers
+v0x55be1a2a93e0_0 .net "w37", 0 0, L_0x55be1a2aac50;  1 drivers
+v0x55be1a2a94a0_0 .net "w39", 0 0, L_0x55be1a2aa4e0;  1 drivers
+v0x55be1a2a9560_0 .net "w49", 0 0, L_0x55be1a2aa7e0;  1 drivers
+v0x55be1a2a9620_0 .net "w55", 0 0, L_0x55be1a2aa690;  1 drivers
+v0x55be1a2a96e0_0 .net "w62", 0 0, L_0x55be1a2aabe0;  1 drivers
+v0x55be1a2a97a0_0 .net "w69", 0 0, L_0x55be1a2ab110;  1 drivers
+v0x55be1a2a9860_0 .net "w82", 0 0, L_0x55be1a2aaf80;  1 drivers
+v0x55be1a2a9920_0 .net "w84", 0 0, L_0x55be1a2aaa70;  1 drivers
+v0x55be1a2a99e0_0 .net "w91", 0 0, L_0x55be1a2aadd0;  1 drivers
+v0x55be1a2a9aa0_0 .net "w95", 0 0, L_0x55be1a2ab2e0;  1 drivers
+v0x55be1a2a9b60_0 .net "w97", 0 0, L_0x55be1a2ab180;  1 drivers
+v0x55be1a2a9c20_0 .net "w99", 0 0, L_0x55be1a2aa5d0;  1 drivers
+v0x55be1a2a9ce0_0 .net "x", 0 0, v0x55be1a2a9ee0_0;  1 drivers
+v0x55be1a2a9da0_0 .net "z", 0 0, L_0x55be1a2aa240;  alias, 1 drivers
+    .scope S_0x55be1a27d020;
+T_0 ;
+    %vpi_call 2 8 "$dumpfile", "ex.vcd" {0 0 0};
+    %vpi_call 2 9 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x55be1a27d020 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2a9ee0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2a9fa0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2aa070_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2a9ee0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2a9fa0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2aa070_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2a9ee0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2a9fa0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2aa070_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2a9ee0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2a9fa0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2aa070_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2a9ee0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2a9fa0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2aa070_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2a9ee0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2a9fa0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2aa070_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2a9ee0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55be1a2a9fa0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2aa070_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2a9ee0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2a9fa0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x55be1a2aa070_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 19 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+    .scope S_0x55be1a27d020;
+T_1 ;
+    %vpi_call 2 23 "$monitor", "At time %2t, a = %d b = %d c = %d z = %d", $time, v0x55be1a2a9ee0_0, v0x55be1a2a9fa0_0, v0x55be1a2aa070_0, v0x55be1a2aa170_0 {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "blackbox_tb.v";
+    "blackbox.v";
